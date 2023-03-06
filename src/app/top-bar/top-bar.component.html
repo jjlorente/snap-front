@@ -1,0 +1,57 @@
+<div class="container-top-bar">
+    <mat-toolbar id="toolbar">
+        <mat-toolbar-row>
+            <img id="logoImage" src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/mvlsnap_lob_log_def_01.png" fxHide.lt-md="false" fxHide.gt-sm="false">
+            <div class="containerMenu" fxShow="true" fxHide.lt-md="true">
+                <button class="hover-class" mat-button routerLink="card" routerLinkActive="active">
+                    CARTAS
+                </button>
+                <button class="hover-class" mat-button routerLink="noticia" routerLinkActive="active">
+                    NOTICIAS
+                </button>
+                <button class="hover-class" mat-button routerLink="deck" routerLinkActive="active">
+                    DECKS
+                </button>
+                <button class="hover-class" mat-button routerLink="guia" routerLinkActive="active">
+                    GUÍAS
+                </button>
+                <button class="hover-class" mat-button routerLink="parche" routerLinkActive="active">
+                    PARCHES
+                </button>
+            </div>
+            <div class="button_menu_container" fxLayoutAlign="end" >
+                <button id="button_menu" mat-icon-button (click)="toggleButton()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+      
+    <nav class="nav_menu">
+        <a class="hover-class nav-a" mat-list-item  routerLink="card" routerLinkActive="active">
+            CARTAS
+        </a>
+        <a class="hover-class nav-a" mat-list-item  routerLink="noticia" routerLinkActive="active">
+            NOTICIAS
+        </a>
+        <a  class="hover-class nav-a" mat-list-item  routerLink="deck" routerLinkActive="active">
+            DECKS
+        </a>
+        <a class="hover-class nav-a" mat-list-item routerLink="guia" routerLinkActive="active">
+            GUÍAS
+        </a>
+        <a class="hover-class nav-a" mat-list-item routerLink="parche" routerLinkActive="active">
+            PARCHES
+        </a>
+    </nav>
+</div>
+
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
+
+
+
+
+    
+

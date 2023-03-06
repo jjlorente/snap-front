@@ -1,0 +1,81 @@
+.spacer{
+    height: 70px;
+}
+
+.card-component{
+    width: 95%; margin: auto; 
+    font-family: 'Righteous', cursive; 
+    margin-bottom: 10px; 
+    background-color:rgb(53 24 106); 
+    color: white;
+}
+
+.back-button{
+    margin-bottom: 5px; 
+    font-family: 'Righteous', cursive;
+    border: solid 1px black;
+    background-color: rgb(171, 81, 255);
+}
+
+.deck-title{
+    font-family: 'Righteous', cursive;
+}
+
+.container-other-decks {
+    display: flex; 
+    flex-direction:row; 
+    justify-content: space-between ; 
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container-images {
+    margin:auto; 
+    width:80%;
+}
+
+.container-info-otherdeck {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+.other-deck {
+    color: white;  
+    width: 20%; 
+    background-color: #6e44bc; 
+    min-width: 200px; 
+    margin:auto; 
+    margin-top: 10px;
+    border: solid 1px black; 
+    cursor: pointer;
+}
+
+.other-deck:hover {
+    background-color: #1d0e39;
+    border: solid 1px rgb(255, 255, 255); 
+}
+
+.container-cards{
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    margin: auto;
+}
+
+.container-card{
+    width: 100px;
+}
+
+.image-card{
+    width: 100px;
+}
+
+.text-card{
+    text-align: center;
+}

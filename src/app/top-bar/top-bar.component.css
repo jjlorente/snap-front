@@ -1,0 +1,96 @@
+.container-top-bar{
+    position: fixed; 
+    z-index: 1; 
+    width: 100%;
+}
+
+#toolbar {
+    background-color: #6523B6;
+    color: white;
+}
+
+.btn-base-datos{
+    background-color: #6523B6;
+    color: white;
+    line-height: 0px;
+    padding: 12px 10px 10px 10px;
+}
+
+::ng-deep .customize {
+    background-color: #6523B6;
+    box-shadow: none;
+}
+
+#accountButton{
+    background-color: #AF4416;
+    color: white;
+}
+
+mat-toolbar img {
+    display: inline;
+    margin-right: 1%;
+    max-width: 80% !important;
+    max-height: 80% !important;
+}
+
+.containerMenu{
+    margin-right: 10px;
+}
+
+button{
+    margin-right: 3%;
+    border-radius: 10%;
+    padding: 0.7% 1%;
+    font-family: 'Righteous', cursive;
+}
+
+.hover-class:hover, .active {
+   background-color: #4A1885; 
+}
+
+.sidenavContainer{
+    background-color: #6523B6;
+}
+
+a {
+    font-family: 'Righteous', cursive;
+}
+nav{
+    display:none; 
+    right:0; 
+    width: 100px; 
+    height: auto; 
+    background-color: #6523B6; 
+    position: absolute; 
+    border-radius: 0 0 0 5px;
+}
+.nav-a{
+    color: inherit; 
+    text-decoration: inherit;  
+    color:white; 
+    text-align: center;
+    padding: 1px;
+}
+
+.button_menu_container{
+    width: 100%;
+}
+
+#button_menu{
+    height: 100%; 
+    margin-right:0;
+}
+
+@media (min-width: 959px) {
+    #button_menu {
+        display: none;
+    }
+    .nav_menu {
+        display: none !important;
+    }
+}
+@media (max-width: 959px) {
+    #button_menu {
+        display: block;
+    }
+}

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="spacer"></div>
+    <div >
+        <ng-container *ngFor="let deck of decks">
+            <mat-card (click)="clickDeck(deck)" [routerLink]="['/deck',deck.name]" [state]="deck" routerLinkActive="deck">
+                <div class="container-templates">
+                    <h3 class="deck-title deck-name width33">Deck {{deck.name}}</h3>
+                    <ng-template [ngIf]="deck.tier=='S'">
+                        <h3 class="width33 title-tier-1 deck-title">Tier {{deck.tier}}</h3>
+                    </ng-template>
+                    <ng-template [ngIf]="deck.tier=='A'">
+                        <h3 class="width33 title-tier-2 deck-title">Tier {{deck.tier}}</h3>
+                    </ng-template>
+                    <ng-template [ngIf]="deck.tier=='B'">
+                        <h3 class="width33 title-tier-3 deck-title">Tier {{deck.tier}}</h3>
+                    </ng-template>
+                    <h3 class="width33 deck-title pool-title">Only in Pool {{deck.pool}}</h3>
+                </div>
+                <div class="container-cards">
+                    <div class="cards-c" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                        <ng-container *ngFor="let card of deck.cards">
+                            <div class="card-info">
+                                <img class="image-card" src="{{card.img}}">
+                                <p class="deck-title card-name">{{card.name}}</p>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </mat-card>
+        </ng-container>
+    </div>  
+</div>
+

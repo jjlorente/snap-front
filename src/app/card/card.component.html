@@ -1,0 +1,56 @@
+<div class="container-cards">
+    <div style="height: 40px;"></div>
+    <div class="conatiner-form-cards">
+        <div class="title-and-form">
+            <h3 class="title-pool">Buscar carta: </h3>
+            <form style="margin-left:5px;">
+                <mat-form-field class="mat-form-autocomplete" appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input type="text"
+                            aria-label="Buscar carta"
+                            matInput
+                            [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let card of cards" [value]="card.name">
+                            {{card.name}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+
+    <h1 class="title-pool">Pool 1</h1>
+    <div class="container-pool">
+        <ng-container *ngFor="let card of cards">
+            <mat-card name="pool1" class="mat-card" id={{card._id}} *ngIf="card.pool==1">
+                <img class="zoom card-img" src={{card.img}} alt={{card.name}}>
+                <h3 class="card-name"><b>{{card.name}}</b></h3>
+                <p class="card-hability">{{card.hability}}</p>
+            </mat-card>
+        </ng-container>
+    </div>
+
+    <h1 class="title-pool">Pool 2</h1>
+    <div class="container-pool">
+        <ng-container id="pool2" *ngFor="let card of cards">
+            <mat-card name="pool2" class="mat-card" id={{card._id}} *ngIf="card.pool==2">
+                <img class="zoom card-img" src={{card.img}} alt={{card.name}}>
+                <h3 class="card-name"><b>{{card.name}}</b></h3>
+                <p class="card-hability">{{card.hability}}</p>
+            </mat-card>
+        </ng-container>
+    </div>
+
+    <h1 class="title-pool">Pool 3</h1>
+    <div class="container-pool">
+        <ng-container id="pool3" *ngFor="let card of cards">
+            <mat-card name="pool3" class="mat-card" id={{card._id}} *ngIf="card.pool==3">
+                <img class="zoom card-img" src={{card.img}} alt={{card.name}}>
+                <h3 class="card-name"><b>{{card.name}}</b></h3>
+                <p class="card-hability">{{card.hability}}</p>
+            </mat-card>
+        </ng-container>
+    </div>
+</div>

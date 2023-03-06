@@ -1,0 +1,41 @@
+<div class="spacer"></div>
+<mat-card class="card-component" *ngIf="deck['navigationId'] != 1; else notexist" >
+    <button mat-raised-button (click)="goBack()" class="back-button"><mat-icon>keyboard_backspace</mat-icon></button>
+    <ng-container>
+        <h1 class="deck-title" #deckname>Deck {{ deck.name }}</h1>
+        <h3 class="deck-title">Guide:</h3>
+        <p>{{ deck.guide }}</p>
+        <div class="container-cards">
+            <ng-container *ngFor="let card of deck.cards">
+                <div class="container-card">
+                    <img class="image-card" src="{{card.img}}" alt="{{card.name}}">
+                    <p class="text-card"><b>{{card.name}}</b></p>
+                    <p class="text-card">{{card.hability}}</p>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+</mat-card>
+
+<mat-card class="other-decks card-component">
+    <h1 class="deck-title">Other decks:</h1>
+    <div class="container-other-decks">
+        <ng-container *ngFor="let deck of otherDecks; index as i;">
+            <mat-card class="other-deck" (click)="clickOtherDeck(deck)" [routerLink]="['/deck',deck.name]" *ngIf="i<4 && deck.name != deckName">
+                <h1 class="deck-title text-center"> {{deck.name}}</h1>
+                <div class="container-images">
+                    <img style="margin:auto;" src="{{deck.cards[0].img}}" width="50%">
+                    <img style="margin:auto;" src="{{deck.cards[deck.cards.length-1].img}}" width="50%">
+                </div>
+                <div class="container-info-otherdeck">
+                    <h1 class="deck-title" style="text-align:center;"> Pool {{deck.pool}}</h1>
+                    <h1 class="deck-title" style="text-align:center;"> Tier {{deck.tier}}</h1>
+                </div>
+            </mat-card>
+        </ng-container>
+    </div>
+</mat-card>
+
+<ng-template #notexist>
+    <h1 class="deck-title">Este deck no existe!</h1>
+</ng-template>

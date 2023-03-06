@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="spacer"></div>
+    <div class="container-notices">
+        <ng-container *ngFor="let new of news">
+            <mat-card id={{new._id}}>
+                <img src={{new.image}} >
+                <h3><b>{{new.title}}</b></h3>
+                <p class="text-card">{{new.description}}</p>
+            </mat-card>
+        </ng-container>
+    </div>
+</div>
+
