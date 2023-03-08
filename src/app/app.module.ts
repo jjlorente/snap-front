@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './card/card.component';
+import { ParcheComponent } from './parche/parche.component';
 import { NoticiaComponent } from './noticia/noticia.component';
 import { CookieService } from 'ngx-cookie-service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,7 +25,8 @@ import { DeckGuideComponent } from './deck-guide/deck-guide.component';
     CardComponent,
     FooterComponent,
     NoticiaComponent,
-    DeckGuideComponent
+    DeckGuideComponent,
+    ParcheComponent
   ],
   imports: [
     BrowserModule,

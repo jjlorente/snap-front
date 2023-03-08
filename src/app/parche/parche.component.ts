@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ParcheService } from './parche.service';
 
 @Component({
   selector: 'app-parche',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parche.component.css']
 })
 export class ParcheComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private parcheService: ParcheService) { }
+  
+  pars:any;
+  ngOnInit() {
+    this.parcheService.getAllNews().subscribe(data =>{
+      this.pars = data;
+    });
   }
-
 }

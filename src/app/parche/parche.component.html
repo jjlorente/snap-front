@@ -1,2 +1,12 @@
-<div style="height: 80px;"></div>
-<p>parche works!</p>
+<div class="container">
+    <div class="spacer"></div>
+    <div class="container-parches">
+        <ng-container *ngFor="let par of pars">
+            <mat-card id={{par._id}}>
+                <img src={{par.image}} >
+                <h3><b>{{par.title}}</b></h3>
+                <p class="text-card">{{par.description}}</p>
+            </mat-card>
+        </ng-container>
+    </div>
+</div>
